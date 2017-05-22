@@ -1,0 +1,228 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{86058984-0951-4DED-B854-43BF6E0BAC46}</ProjectGuid>
+    <RootNamespace>DIP_System</RootNamespace>
+    <Keyword>MFCProj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v110</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>Dynamic</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v110</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>Dynamic</UseOfMfc>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>
+      </AdditionalDependencies>
+    </Link>
+    <Midl>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <ValidateAllParameters>true</ValidateAllParameters>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0804</Culture>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+    <Midl>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <ValidateAllParameters>true</ValidateAllParameters>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0804</Culture>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Basic.h" />
+    <ClInclude Include="ChangeBppDlg.h" />
+    <ClInclude Include="ChildFrm.h" />
+    <ClInclude Include="Coding.h" />
+    <ClInclude Include="ColorGradDlg.h" />
+    <ClInclude Include="ColorGradWnd.h" />
+    <ClInclude Include="CurveDlg.h" />
+    <ClInclude Include="CurveWnd.h" />
+    <ClInclude Include="Dib.h" />
+    <ClInclude Include="DIP_System.h" />
+    <ClInclude Include="DIP_SystemDoc.h" />
+    <ClInclude Include="DIP_SystemView.h" />
+    <ClInclude Include="DlgIntensity.h" />
+    <ClInclude Include="DlgPointDT.h" />
+    <ClInclude Include="DlgPointDZ.h" />
+    <ClInclude Include="DlgPointStre.h" />
+    <ClInclude Include="DlgPointWin.h" />
+    <ClInclude Include="DLGSetAngle.h" />
+    <ClInclude Include="DLGSetFreq.h" />
+    <ClInclude Include="Dl_quant.h" />
+    <ClInclude Include="DynamicCompressParam.h" />
+    <ClInclude Include="EnhancedHistDlg.h" />
+    <ClInclude Include="Filter.h" />
+    <ClInclude Include="FreqCalculate.h" />
+    <ClInclude Include="FreqFilter.h" />
+    <ClInclude Include="GaussianDlg.h" />
+    <ClInclude Include="GeoOperator.h" />
+    <ClInclude Include="GeoTrans.h" />
+    <ClInclude Include="GrayOperator.h" />
+    <ClInclude Include="GrayProc.h" />
+    <ClInclude Include="HistogramDlg.h" />
+    <ClInclude Include="HistogramWnd.h" />
+    <ClInclude Include="jconfig.h" />
+    <ClInclude Include="jmorecfg.h" />
+    <ClInclude Include="Jpegfile.h" />
+    <ClInclude Include="jpeglib.h" />
+    <ClInclude Include="KernelDef.h" />
+    <ClInclude Include="MainFrm.h" />
+    <ClInclude Include="Morph.h" />
+    <ClInclude Include="Noise.h" />
+    <ClInclude Include="PreviewDlg.h" />
+    <ClInclude Include="Resource.h" />
+    <ClInclude Include="RotateDlg.h" />
+    <ClInclude Include="SpaceFilter.h" />
+    <ClInclude Include="SpaceFilterDlg.h" />
+    <ClInclude Include="SpaceFilterWnd.h" />
+    <ClInclude Include="SplitProc.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="StretchDlg.h" />
+    <ClInclude Include="targetver.h" />
+    <ClInclude Include="ThresholdDlg.h" />
+    <ClInclude Include="UndoStack.h" />
+    <ClInclude Include="WaterMarking.h" />
+    <ClInclude Include="ZoomDlg.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="ChangeBppDlg.cpp" />
+    <ClCompile Include="ChildFrm.cpp" />
+    <ClCompile Include="Coding.cpp" />
+    <ClCompile Include="ColorGradDlg.cpp" />
+    <ClCompile Include="ColorGradWnd.cpp" />
+    <ClCompile Include="CurveDlg.cpp" />
+    <ClCompile Include="CurveWnd.cpp" />
+    <ClCompile Include="Dib.cpp" />
+    <ClCompile Include="DIP_System.cpp" />
+    <ClCompile Include="DIP_SystemDoc.cpp" />
+    <ClCompile Include="DIP_SystemView.cpp" />
+    <ClCompile Include="DlgIntensity.cpp" />
+    <ClCompile Include="DlgPointDT.cpp" />
+    <ClCompile Include="DlgPointDZ.cpp" />
+    <ClCompile Include="DlgPointStre.cpp" />
+    <ClCompile Include="DlgPointWin.cpp" />
+    <ClCompile Include="DLGSetAngle.cpp" />
+    <ClCompile Include="DLGSetFreq.cpp" />
+    <ClCompile Include="Dl_quant.cpp" />
+    <ClCompile Include="DynamicCompressParam.cpp" />
+    <ClCompile Include="EnhancedHistDlg.cpp" />
+    <ClCompile Include="Filter.cpp" />
+    <ClCompile Include="FreqCalculate.cpp" />
+    <ClCompile Include="FreqFilter.cpp" />
+    <ClCompile Include="GaussianDlg.cpp" />
+    <ClCompile Include="GeoOperator.cpp" />
+    <ClCompile Include="GeoTrans.cpp" />
+    <ClCompile Include="GrayOperator.cpp" />
+    <ClCompile Include="GrayProc.cpp" />
+    <ClCompile Include="HistogramDlg.cpp" />
+    <ClCompile Include="HistogramWnd.cpp" />
+    <ClCompile Include="Jpegfile.cpp" />
+    <ClCompile Include="KernelDef.cpp" />
+    <ClCompile Include="MainFrm.cpp" />
+    <ClCompile Include="Morph.cpp" />
+    <ClCompile Include="Noise.cpp" />
+    <ClCompile Include="PreviewDlg.cpp" />
+    <ClCompile Include="RotateDlg.cpp" />
+    <ClCompile Include="SpaceFilter.cpp" />
+    <ClCompile Include="SpaceFilterDlg.cpp" />
+    <ClCompile Include="SpaceFilterWnd.cpp" />
+    <ClCompile Include="SplitProc.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="StretchDlg.cpp" />
+    <ClCompile Include="ThresholdDlg.cpp" />
+    <ClCompile Include="UndoStack.cpp" />
+    <ClCompile Include="WaterMarking.cpp" />
+    <ClCompile Include="ZoomDlg.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="DIP_System.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\DIP_System.rc2" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\DIP_System.ico" />
+    <Image Include="res\DIP_SystemDoc.ico" />
+    <Image Include="res\Toolbar.bmp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
