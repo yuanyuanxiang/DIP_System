@@ -11,6 +11,7 @@
  * optimizations.  Most users will not need to touch this file.
  */
 
+
 /*
  * Define BITS_IN_JSAMPLE as either
  *   8   for 8-bit sample values (the usual setting)
@@ -31,6 +32,7 @@
 
 #define BITS_IN_JSAMPLE  8	/* use 8, 9, 10, 11, or 12 */
 
+
 /*
  * Maximum number of components (color channels) allowed in JPEG image.
  * To meet the letter of the JPEG spec, set this to 255.  However, darn
@@ -42,10 +44,11 @@
 
 #define MAX_COMPONENTS  10	/* maximum number of image components */
 
+
 /*
  * Basic data types.
  * You may need to change these if you have a machine with unusual data
- * type sizes; for example, L"char" not 8 bits, L"short" not 16 bits,
+ * type sizes; for example, "char" not 8 bits, "short" not 16 bits,
  * or "long" not 32 bits.  We don't care whether "int" is 16 or 32 bits,
  * but it had better be at least 16.
  */
@@ -63,7 +66,7 @@
 
 #ifdef HAVE_UNSIGNED_CHAR
 
-typedef BYTE JSAMPLE;
+typedef unsigned char JSAMPLE;
 #define GETJSAMPLE(value)  ((int) (value))
 
 #else /* not HAVE_UNSIGNED_CHAR */
@@ -82,6 +85,7 @@ typedef char JSAMPLE;
 
 #endif /* BITS_IN_JSAMPLE == 8 */
 
+
 #if BITS_IN_JSAMPLE == 9
 /* JSAMPLE should be the smallest type that will hold the values 0..511.
  * On nearly all machines "short" will do nicely.
@@ -94,6 +98,7 @@ typedef short JSAMPLE;
 #define CENTERJSAMPLE	256
 
 #endif /* BITS_IN_JSAMPLE == 9 */
+
 
 #if BITS_IN_JSAMPLE == 10
 /* JSAMPLE should be the smallest type that will hold the values 0..1023.
@@ -108,6 +113,7 @@ typedef short JSAMPLE;
 
 #endif /* BITS_IN_JSAMPLE == 10 */
 
+
 #if BITS_IN_JSAMPLE == 11
 /* JSAMPLE should be the smallest type that will hold the values 0..2047.
  * On nearly all machines "short" will do nicely.
@@ -120,6 +126,7 @@ typedef short JSAMPLE;
 #define CENTERJSAMPLE	1024
 
 #endif /* BITS_IN_JSAMPLE == 11 */
+
 
 #if BITS_IN_JSAMPLE == 12
 /* JSAMPLE should be the smallest type that will hold the values 0..4095.
@@ -134,6 +141,7 @@ typedef short JSAMPLE;
 
 #endif /* BITS_IN_JSAMPLE == 12 */
 
+
 /* Representation of a DCT frequency coefficient.
  * This should be a signed value of at least 16 bits; "short" is usually OK.
  * Again, we allocate large arrays of these, but you can change to int
@@ -141,6 +149,7 @@ typedef short JSAMPLE;
  */
 
 typedef short JCOEF;
+
 
 /* Compressed datastreams are represented as arrays of JOCTET.
  * These must be EXACTLY 8 bits wide, at least once they are written to
@@ -150,7 +159,7 @@ typedef short JCOEF;
 
 #ifdef HAVE_UNSIGNED_CHAR
 
-typedef BYTE JOCTET;
+typedef unsigned char JOCTET;
 #define GETJOCTET(value)  (value)
 
 #else /* not HAVE_UNSIGNED_CHAR */
@@ -164,6 +173,7 @@ typedef char JOCTET;
 
 #endif /* HAVE_UNSIGNED_CHAR */
 
+
 /* These typedefs are used for various table entries and so forth.
  * They must be at least as wide as specified; but making them too big
  * won't cost a huge amount of memory, so we don't provide special
@@ -174,7 +184,7 @@ typedef char JOCTET;
 /* UINT8 must hold at least the values 0..255. */
 
 #ifdef HAVE_UNSIGNED_CHAR
-typedef BYTE UINT8;
+typedef unsigned char UINT8;
 #else /* not HAVE_UNSIGNED_CHAR */
 #ifdef CHAR_IS_UNSIGNED
 typedef char UINT8;
@@ -220,6 +230,7 @@ typedef unsigned int JDIMENSION;
 
 #define JPEG_MAX_DIMENSION  65500L  /* a tad under 64K to prevent overflows */
 
+
 /* These macros are used in all function definitions and extern declarations.
  * You could modify them if you need to change function linkage conventions;
  * in particular, you'll need to do that to make the library a Windows DLL.
@@ -236,6 +247,7 @@ typedef unsigned int JDIMENSION;
 /* a reference to a GLOBAL function: */
 #define EXTERN(type)		extern type
 
+
 /* This macro is used to declare a "method", that is, a function pointer.
  * We want to supply prototype parameters if the compiler can cope.
  * Note that the arglist parameter must be parenthesized!
@@ -247,6 +259,7 @@ typedef unsigned int JDIMENSION;
 #else
 #define JMETHOD(type,methodname,arglist)  type (*methodname) ()
 #endif
+
 
 /* The noreturn type identifier is used to declare functions
  * which cannot return.
@@ -267,6 +280,7 @@ typedef unsigned int JDIMENSION;
 typedef void noreturn_t;
 #endif
 
+
 /* Here is the pseudo-keyword for declaring pointers that must be "far"
  * on 80x86 machines.  Most of the specialized coding for 80x86 is handled
  * by just saying "FAR *" where such a pointer is needed.  In a few places
@@ -280,6 +294,7 @@ typedef void noreturn_t;
 #define FAR
 #endif
 #endif
+
 
 /*
  * On a few systems, type boolean and/or its values FALSE, TRUE may appear
@@ -303,6 +318,7 @@ typedef enum { FALSE = 0, TRUE = 1 } boolean;
 #endif
 #endif
 
+
 /*
  * The remaining options affect code selection within the JPEG library,
  * but they don't need to be visible to most applications using the library.
@@ -315,6 +331,7 @@ typedef enum { FALSE = 0, TRUE = 1 } boolean;
 #endif
 
 #ifdef JPEG_INTERNAL_OPTIONS
+
 
 /*
  * These defines indicate whether to include various optional functions.
@@ -363,6 +380,7 @@ typedef enum { FALSE = 0, TRUE = 1 } boolean;
 
 /* more capability options later, no doubt */
 
+
 /*
  * Ordering of RGB data in scanlines passed to or from the application.
  * If your application wants to deal with data in the order B,G,R, just
@@ -381,7 +399,9 @@ typedef enum { FALSE = 0, TRUE = 1 } boolean;
 #define RGB_BLUE	2	/* Offset of Blue */
 #define RGB_PIXELSIZE	3	/* JSAMPLEs per RGB scanline element */
 
+
 /* Definitions for speed-related optimizations. */
+
 
 /* If your compiler supports inline functions, define INLINE
  * as the inline keyword; otherwise define it as empty.
@@ -396,6 +416,7 @@ typedef enum { FALSE = 0, TRUE = 1 } boolean;
 #endif
 #endif
 
+
 /* On some machines (notably 68000 series) "int" is 32 bits, but multiplying
  * two 16-bit shorts is faster than multiplying two ints.  Define MULTIPLIER
  * as short on such a machine.  MULTIPLIER must be at least 16 bits wide.
@@ -404,6 +425,7 @@ typedef enum { FALSE = 0, TRUE = 1 } boolean;
 #ifndef MULTIPLIER
 #define MULTIPLIER  int		/* type for fastest integer multiply */
 #endif
+
 
 /* FAST_FLOAT should be either float or double, whichever is done faster
  * by your compiler.  (Note that this type is only used in the floating point
@@ -422,4 +444,3 @@ typedef enum { FALSE = 0, TRUE = 1 } boolean;
 #endif
 
 #endif /* JPEG_INTERNAL_OPTIONS */
-

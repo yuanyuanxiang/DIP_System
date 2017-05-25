@@ -9,8 +9,9 @@
 
 
 // CRotateDlg ¶Ô»°¿ò
-
+#ifndef PI
 #define PI 3.1415926535
+#endif
 
 IMPLEMENT_DYNAMIC(CRotateDlg, CDialog)
 

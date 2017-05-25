@@ -39,7 +39,9 @@ static char THIS_FILE[] = __FILE__;
 #endif
 
 // ³£Êý¦Ð
+#ifndef PI
 #define PI 3.1415926535
+#endif
 
 /////////////////////////////////////////////////////////////////////////////
 // CFreqCalculate

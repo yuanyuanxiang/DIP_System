@@ -5,7 +5,7 @@
 
 #pragma once
 
-#include "include/vld.h"
+#include "vld.h"
 
 #ifndef VC_EXTRALEAN
 #define VC_EXTRALEAN            // 从 Windows 头中排除极少使用的资料
@@ -47,7 +47,7 @@ using namespace Gdiplus;
 
 #define WIDTHBYTES(bits)    (((bits) + 31) / 32 * 4)				//计算每行字节数
 
-#define PI 3.141592653f
+#define PI 3.141592653
 
 #define RAD(i) (PI * (i) / 180.0f)	//角度转弧度
 

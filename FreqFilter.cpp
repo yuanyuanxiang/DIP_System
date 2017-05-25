@@ -909,8 +909,6 @@ void CFreqFilter::PSE_Filter(float fD)
  ************************************************************************/
 void CFreqFilter::MinPower(float fD)
 {
-	#define PI 3.1415
-
 	// ¡Ÿ ±±‰¡ø
 	LONG	i;
 	LONG	j;

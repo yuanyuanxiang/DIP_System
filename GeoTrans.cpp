@@ -183,8 +183,6 @@ BOOL CGeoTrans::ZoomDIB(float fZoomRatio)
  ************************************************************************/
 void CGeoTrans::Rotate(float fAngle)
 {
-	#define PI 3.14159	
-	
 	LONG i0;
 	LONG j0;
 	LONG i1;
@@ -261,8 +259,6 @@ void CGeoTrans::Rotate(float fAngle)
  ************************************************************************/
 void CGeoTrans::Rectinication(float fAngle)
 {
-	#define PI 3.14159	
-
 	LONG i0;
 	LONG j0;
 	LONG i1;
