@@ -78,4 +78,10 @@ using namespace Gdiplus;
 #endif
 #endif
 
-
+// MS Visual Studio 2015
+// vs2015无法解析外部符号__imp__fprintf 以及imp_iob_func错误
+// https://blog.csdn.net/hutianyou123/article/details/76577827
+#if _MSC_VER>=1900
+extern "C" { FILE __iob_func[3] = { *stdin,*stdout,*stderr }; }
+#pragma comment(lib, "legacy_stdio_definitions.lib")
+#endif

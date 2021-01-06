@@ -116,8 +116,11 @@ void CSplitProc::RgnGrow(COLORREF clrSeed_I, COLORREF clrSeed_II)
 
 			//计算当前点灰度值
 			BYTE Y = (9798 * R + 19235 * G + 3735 * B) / 32768;
-			
+#if _MSC_VER>=1900
+			if (fabs(Y - fY_I) < fabs(Y - fY_II))
+#else
 			if (abs(Y - fY_I) < abs(Y - fY_II))
+#endif
 			{
 				//当前点同种子一灰度值比较接近
 				
