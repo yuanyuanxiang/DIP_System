@@ -5,6 +5,7 @@
 
 #pragma once
 
+// https://kinddragon.github.io/vld/
 #include "vld.h"
 
 #ifndef VC_EXTRALEAN
@@ -59,6 +60,7 @@ using namespace Gdiplus;
 
 #define memicmp _memicmp
 
+// https://github.com/libjpeg-turbo/libjpeg-turbo
 #pragma comment(lib, "res/jpeg.lib")
 
 // USING CUDA, 2016-12-4

@@ -344,8 +344,6 @@
     <None Include="res\DIP_System.rc2">
       <Filter>资源文件</Filter>
     </None>
-  </ItemGroup>
-  <ItemGroup>
-    <Text Include="ReadMe.txt" />
+    <None Include="README.md" />
   </ItemGroup>
 </Project>
